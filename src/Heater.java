@@ -11,7 +11,7 @@ public class Heater {
 
     public void setLevel(int level){
         this.level = level;
-        System.out.println("Neue Stufe: " + level);
+        System.out.println("Heizung auf Stufe: " + level + " eingestellt.");
     }
 
     public void selectLevel() throws RuntimeException, IOException{
@@ -21,7 +21,7 @@ public class Heater {
 
         System.out.println("Bitte geben Sie eine neue Heizstufe ein (1-5): ");
         newLevel = scanner.nextInt();
-        System.out.println("newLevel: " + newLevel);
+
         if(newLevel>5) throw new RuntimeException("Wert ungültig. Es sind nur Werte zwischen 0 und 5 zugelassen");
         this.setLevel(newLevel);
 
